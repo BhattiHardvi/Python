@@ -1,6 +1,9 @@
 print("Welcome to Data Analyzer and Transformer Program\n")
 
 arr=[]
+
+
+
 def display_data():
 
     print("Main menu:")
@@ -13,11 +16,13 @@ def display_data():
     print("7. Exit Program")
 
 
+
 def input_data():
     global arr
     arr=[int(i) for i in input("Enter data for a 1D array (separated by comma): \n").split(",")]
 
     print("\nData has been stored successfully !\n")
+
 
 
 def data_summary():
@@ -31,12 +36,16 @@ def data_summary():
     print("- Average value:",sum(arr)/len(arr))
     print("\n")
 
+
+
 def fact(n):
 
     if(n==0 or n==1):
         return 1
     else:
         return n*fact(n-1)
+
+
 
 def main():
 
@@ -88,6 +97,8 @@ def Sorting():
         print(*arr)
         print("\n")
 
+
+
 def data_statistics():
 
     print("Dataset Statistics:")
@@ -97,8 +108,6 @@ def data_statistics():
     print("- Sum of all value:",sum(arr))
     print("- Average value:",sum(arr)/len(arr))
     print("\n")
-
-
 
 
 while True:
