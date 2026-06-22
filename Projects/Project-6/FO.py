@@ -4,12 +4,14 @@ class JournalManager:
 
     def add_entry(self):
             try:
+                date=input("Enter date (DD/MM/YYYY): ")
+                time=input("Enter time (HH:MM): ")
                 entry=input("Enter your journal entry:\n")
 
                 with open(self.filename,"a") as file:
-                    file.write(entry + "\n")
+                    file.write(f"[{date} {time}] {entry}\n")
 
-                print("Entry added successfully!")
+                print("\nEntry added successfully!\n")
 
             except Exception as e:
                 print("Error:",e)
@@ -24,7 +26,7 @@ class JournalManager:
                         print("-"*10)
                         print(data)
                     else:
-                        print("No journal entries are found. Start by adding a new entry!")
+                        print("\nNo journal entries are found. Start by adding a new entry!\n")
 
             except FileNotFoundError:
                 print("Error: The journal file does not exist. Please add a new entry first.")
